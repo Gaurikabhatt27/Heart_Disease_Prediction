@@ -1,0 +1,29 @@
+2. Data Collection and Processing
+
+#loading the csv data
+heart_data = pd.read_csv(r"C:\Users\gauri\OneDrive\Desktop\FINAL PROJECT FOR SUMMER TRAINING\heart_disease_data.csv")
+
+# print first 5 rows of the dataset
+print("First 5 rows of the dataset\n",heart_data.head())
+
+# print last 5 rows of the dataset
+print("\n\nLast 5 rows of the dataset\n",heart_data.tail())
+
+# number of rows and columns in the dataset
+print("\n\nNumber of rows and columns in the dataset\n",heart_data.shape)
+
+# getting some info about the data
+print("\n\nGetting some info about the data\n")
+heart_data.info()
+
+# checking for missing values
+print("\n\nChecking for missing values\n",heart_data.isnull().sum())
+
+# statistical measures about the data
+print("\n\nStatistical measures about the data\n",heart_data.describe())
+
+# checking the distribution of Target Variable
+print("\n\nChecking the distribution of Target Variable\n1 -> Defective Heart\n0 -> Healthy Heart\n\n",heart_data['target'].value_counts())
+
+# 1 -> Defective Heart
+# 0 -> Healthy Heart
