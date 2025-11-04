@@ -1,0 +1,31 @@
+4. Splitting the Data into Training data & Test Data
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=2)
+print("\n\n",X.shape, X_train.shape, X_test.shape)
+
+
+5. Model Training
+
+# -> Logistic Regression
+
+model = LogisticRegression(max_iter=1000)
+
+# training the LogisticRegression model with Training data
+model.fit(X_train, Y_train)
+
+
+6. Model Evaluation
+
+# -> Accuracy Score
+
+# accuracy on Training Data
+X_train_prediction = model.predict(X_train)
+training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+
+print("\n\n",'Accuracy on Training data : ', training_data_accuracy)
+
+# accuracy on Test Data
+X_test_prediction = model.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+
+print("\n\n",'Accuracy on Test data : ', test_data_accuracy)
