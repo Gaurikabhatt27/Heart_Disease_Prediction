@@ -1,0 +1,7 @@
+3. Splitting the Features and Target
+
+X = heart_data.drop(columns='target', axis=1)
+Y = heart_data['target']
+
+print("\n\n",X)
+print("\n\n",Y)
